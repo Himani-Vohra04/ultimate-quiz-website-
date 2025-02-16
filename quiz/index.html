@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Landing Page -->
+    <div class="landing">
+        <h1>🎓 Welcome to the Quiz Platform</h1>
+        <button onclick="showTeacherPanel()">👨‍🏫 Teacher Login</button>
+        <button onclick="showStudentPanel()">🧑‍🎓 Student Login</button>
+    </div>
+
+    <!-- Teacher Panel -->
+    <div id="teacherPanel" class="hidden">
+        <h2>📚 Teacher Dashboard</h2>
+        <form id="quizForm">
+            <label>Question: <input type="text" id="question"></label><br>
+            <label>Option A: <input type="text" id="optionA"></label><br>
+            <label>Option B: <input type="text" id="optionB"></label><br>
+            <label>Option C: <input type="text" id="optionC"></label><br>
+            <label>Option D: <input type="text" id="optionD"></label><br>
+            <label>Correct Answer (A/B/C/D): <input type="text" id="correctAnswer"></label><br>
+            <button type="button" onclick="saveQuiz()">✅ Add Question</button>
+        </form>
+        <button onclick="resetQuiz()">🗑 Clear Quiz Data</button>
+        <button onclick="logout()">🚪 Logout</button>
+    </div>
+
+    <!-- Student Panel -->
+    <div id="studentPanel" class="hidden">
+        <h2>📝 Quiz Time</h2>
+        <div id="quizDisplay"></div>
+        <button onclick="submitQuiz()">Submit Quiz</button>
+        <button onclick="logout()">🚪 Logout</button>
+    </div>
+
+    <!-- Leaderboard -->
+    <div id="leaderboard" class="hidden">
+        <h3>🏆 Leaderboard</h3>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
